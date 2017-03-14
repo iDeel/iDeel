@@ -10,7 +10,7 @@ Do NOT merge into master and prerelease for now, until next meeting. You can bra
 
 1. Open Webstorm and choose creating new project
 2. Choose Node with Express and direct the project folder to your source directory
-3. Webstorm will ask if you want to create with exiting source, say yes
+3. Webstorm will ask if you want to create with exiting source, say no
 4. Go to git, and git add .
 5. Then git reset -hard
 

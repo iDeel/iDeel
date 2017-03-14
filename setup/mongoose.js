@@ -1,7 +1,7 @@
 //-------------------
 // Database
 var mongoose = require('mongoose');
-var mongoDBConnection = require('./../LocalMongoDBConnectingString.config');
+var mongoDBConnection = require('./../CloudMongoDBConnectingString.config');
 mongoose.connect(mongoDBConnection.uri);
 
 
