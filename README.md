@@ -21,3 +21,9 @@ npm install <package_name> --save
 
 To add an entry to your package.json's devDependencies:
 npm install <package_name> --save-dev
+
+# MongoDB
+
+Create a folder db 1 directory before the repo folder
+run mongo server: runMongoDBPort3000.bat
+run mongo shell: runMongoDBShellPort3000.bat
