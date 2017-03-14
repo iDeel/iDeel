@@ -13,6 +13,7 @@ Do NOT merge into master and prerelease for now, until next meeting. You can bra
 3. Webstorm will ask if you want to create with exiting source, say no
 4. Go to git, and git add .
 5. Then git reset -hard
+6. Go to package.js, and right click to npm install missing package
 
 # Add package to package.js
 
