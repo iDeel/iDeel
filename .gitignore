@@ -1,5 +1,5 @@
 
-# Created by https://www.gitignore.io/api/node,angular,webstorm,macos,windows
+# Created by https://www.gitignore.io/api/node,angular,webstorm,macos,windows,bower
 
 ### Angular ###
 ## Angular ##
@@ -31,6 +31,12 @@ testem.log
 
 #System Files
 .DS_Store
+
+### Bower ###
+bower_components
+.bower-cache
+.bower-registry
+.bower-tmp
 
 ### macOS ###
 *.DS_Store
@@ -87,7 +93,6 @@ coverage
 .grunt
 
 # Bower dependency directory (https://bower.io/)
-bower_components
 
 # node-waf configuration
 .lock-wscript
@@ -128,6 +133,7 @@ typings/
 # User-specific stuff:
 .idea/**/workspace.xml
 .idea/**/tasks.xml
+.idea/dictionaries
 
 # Sensitive or high-churn files:
 .idea/**/dataSources/
@@ -159,6 +165,9 @@ typings/
 # JIRA plugin
 atlassian-ide-plugin.xml
 
+# Cursive Clojure plugin
+.idea/replstate.xml
+
 # Crashlytics plugin (for Android Studio and IntelliJ)
 com_crashlytics_export_strings.xml
 crashlytics.properties
@@ -172,6 +181,9 @@ fabric.properties
 # modules.xml
 # .idea/misc.xml
 # *.ipr
+
+# Sonarlint plugin
+.idea/sonarlint
 
 ### Windows ###
 # Windows thumbnail cache files
@@ -194,4 +206,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.gitignore.io/api/node,angular,webstorm,macos,windows
+# End of https://www.gitignore.io/api/node,angular,webstorm,macos,windows,bower
