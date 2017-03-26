@@ -16,12 +16,15 @@
 	<base href="/">
 
 	<!-- Webcomponent -->
+	<link rel="import" href="../bower_components/polymer/polymer.html">
 	<link rel="import" href="../bower_components/paper-toolbar/paper-toolbar.html">
 	<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
 	<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
 	<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
 	<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
-	<link rel="import" href="../bower_components/polymer/polymer.html">
+	<link rel="import" href="../bower_components/paper-button/paper-button.html">
+	<link rel="import" href="../bower_components/paper-input/paper-input.html">
+	<link rel="import" href="../bower_components/iron-form/iron-form.html">
 	<!-- Bootstrap core JavaScript
 ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
@@ -42,14 +45,20 @@
 	<script src="modules/routes.js"></script>
 
 	<style is="custom-style" include='iron-flex iron-positioning'>
-		.flex-center-align {
+		.flex-center-layout-horizontal {
 			@apply(--layout-horizontal);
+			@apply(--layout-center-justified);
 			@apply(--layout-center);
 			height: 120px;
 		}
-		.flex-center-justified {
-			@apply(--layout-horizontal);
+		.flex-center-layout-vertical {
+			@apply(--layout-vertical);
 			@apply(--layout-center-justified);
+			@apply(--layout-center);
+			height: 120px;
+		}
+		.flex{
+			@apply(--layout-flex);
 		}
 		.comingSoon{
 			font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
@@ -57,6 +66,9 @@
 			font-size: 50px;
 			font-weight: 700;
 			text-align: center;
+		}
+		.space-4px {
+			padding: 4px 4px 4px 4px;
 		}
 	</style>
 
@@ -69,10 +81,27 @@
 		<paper-icon-button icon="menu"></paper-icon-button>
 	</paper-toolbar>
 
-	<div class="container flex-center-align flex-center-justified comingSoon">
+	<div class="container flex-center-layout-horizontal comingSoon">
 		<div>iDeel is coming soon</div>
 	</div>
 
+	<div class="flex-center-layout-horizontal">
+		<paper-button raised class="indigo">Register</paper-button>
+	</div>
+
+	<form is="iron-form" id="form" method="post" action="https://ideel.serverwebsite.com">
+		<div class="flex-center-layout-vertical">
+			<div class="flex-center-layout-horizontal">
+				<paper-input required="yes" class="vertical" label="First Name"></paper-input>
+				<span class="space-4px"></span>
+				<paper-input class="vertical" label="Last Name"></paper-input>
+			</div>
+			<paper-input class="flex fullbleed" label="username">
+				<iron-icon icon="mail" prefix></iron-icon>
+				<div suffix>@email.com</div>
+			</paper-input>
+		</div>
+	</form>
 
 </body>
 </html>
