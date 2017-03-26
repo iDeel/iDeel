@@ -10,12 +10,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-	<title>iDeel</title>
-
-	<!-- Bootstrap core CSS -->
 	<base href="/">
 
-	<!-- Webcomponent -->
+	<!-- Webcomponent
+	 ================================================== -->
 	<link rel="import" href="../bower_components/polymer/polymer.html">
 	<link rel="import" href="../bower_components/paper-toolbar/paper-toolbar.html">
 	<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
@@ -25,8 +23,121 @@
 	<link rel="import" href="../bower_components/paper-button/paper-button.html">
 	<link rel="import" href="../bower_components/paper-input/paper-input.html">
 	<link rel="import" href="../bower_components/iron-form/iron-form.html">
-	<!-- Bootstrap core JavaScript
-================================================== -->
+
+	<!-- Theme file
+	================================================== -->
+	<link rel="import" href="stylesheets/global-theme.html">
+
+	<style is="custom-style" include='iron-flex iron-positioning'>
+
+		.flex-center-layout-horizontal {
+			@apply(--layout-horizontal);
+			@apply(--layout-center-justified);
+			@apply(--layout-center);
+		}
+		.flex-center-layout-vertical {
+			@apply(--layout-vertical);
+			@apply(--layout-center-justified);
+			@apply(--layout-center);
+		}
+		.flex{
+			@apply(--layout-flex);
+		}
+
+		.coming-soon{
+			font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+			color: #297187;
+			font-size: 50px;
+			font-weight: 700;
+			text-align: center;
+			height: 25%;
+		}
+		.registration-button {
+			height: 15%;
+		}
+		.registration-form-holder{
+			height: 40%;
+			background-color: seashell;
+		}
+		.follow-us {
+			height: 10%;
+		}
+
+		.registration-form {
+			@apply(--layout-vertical);
+			@apply(--layout-center-justified);
+			@apply(--layout-center);
+			width: 300px;
+			height: 100%;
+		}
+
+		.space-4px {
+			padding: 4px 4px 4px 4px;
+		}
+		.name-field {
+			height: 75px;
+		}
+		.email-field {
+			height: 75px;
+			width: 100%;
+		}
+		.registration-submit-button {
+			height: 75px;
+		}
+
+
+	</style>
+
+	<title>iDeel</title>
+
+</head>
+
+<body class="fullbleed" style="background-color:powderblue;">
+	<paper-toolbar >
+		<div>iDeel</div>
+		<span class="flex"></span>
+		<paper-icon-button icon="menu"></paper-icon-button>
+	</paper-toolbar>
+
+	<div class="container flex-center-layout-horizontal coming-soon">
+		<div>iDeel is coming soon</div>
+	</div>
+
+	<div class="flex-center-layout-horizontal registration-button">
+		<paper-button raised class="indigo">Register</paper-button>
+	</div>
+
+	<form is="iron-form" id="form" method="post" action="https://ideel.serverwebsite.com" class="registration-form-holder flex-center-layout-vertical">
+		<div class="registration-form">
+			<div>
+				<div class="flex-center-layout-horizontal">
+					<paper-input style="width: 100%" class="vertical" label="First Name"></paper-input>
+					<span class="space-4px"></span>
+					<paper-input style="width: 100%" class="vertical" label="Last Name"></paper-input>
+				</div>
+
+				<paper-input class="flex email-field" label="username@email.com">
+					<iron-icon icon="mail" prefix></iron-icon>
+				</paper-input>
+
+				<div class="flex-center-layout-horizontal registration-submit-button">
+					<paper-button raised class="indigo">Submit</paper-button>
+				</div>
+			</div>
+		</div>
+
+	</form>
+
+	<div class="flex-center-layout-horizontal follow-us">
+		<iron-icon icon="android"></iron-icon>
+		<iron-icon icon="android"></iron-icon>
+		<iron-icon icon="android"></iron-icon>
+	</div>
+
+
+
+
+
 	<!-- Placed at the end of the document so the pages load faster -->
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -44,64 +155,6 @@
 	<script src="../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
 	<script src="modules/routes.js"></script>
 
-	<style is="custom-style" include='iron-flex iron-positioning'>
-		.flex-center-layout-horizontal {
-			@apply(--layout-horizontal);
-			@apply(--layout-center-justified);
-			@apply(--layout-center);
-			height: 120px;
-		}
-		.flex-center-layout-vertical {
-			@apply(--layout-vertical);
-			@apply(--layout-center-justified);
-			@apply(--layout-center);
-			height: 120px;
-		}
-		.flex{
-			@apply(--layout-flex);
-		}
-		.comingSoon{
-			font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
-			color: #297187;
-			font-size: 50px;
-			font-weight: 700;
-			text-align: center;
-		}
-		.space-4px {
-			padding: 4px 4px 4px 4px;
-		}
-	</style>
-
-</head>
-
-<body class="fullbleed" style="background-color:powderblue;">
-	<paper-toolbar >
-		<div>iDeel</div>
-		<span class="flex"></span>
-		<paper-icon-button icon="menu"></paper-icon-button>
-	</paper-toolbar>
-
-	<div class="container flex-center-layout-horizontal comingSoon">
-		<div>iDeel is coming soon</div>
-	</div>
-
-	<div class="flex-center-layout-horizontal">
-		<paper-button raised class="indigo">Register</paper-button>
-	</div>
-
-	<form is="iron-form" id="form" method="post" action="https://ideel.serverwebsite.com">
-		<div class="flex-center-layout-vertical">
-			<div class="flex-center-layout-horizontal">
-				<paper-input required="yes" class="vertical" label="First Name"></paper-input>
-				<span class="space-4px"></span>
-				<paper-input class="vertical" label="Last Name"></paper-input>
-			</div>
-			<paper-input class="flex fullbleed" label="username">
-				<iron-icon icon="mail" prefix></iron-icon>
-				<div suffix>@email.com</div>
-			</paper-input>
-		</div>
-	</form>
 
 </body>
 </html>
