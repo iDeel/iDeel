@@ -5,7 +5,7 @@
 
 <polymer-element name="collapse-toolbar" attributes="query" noscript>
 	<template>
-		<link rel="stylesheet" href="collapse-toolbar.css">
+		<link rel="stylesheet" href="../stylesheets/collapse-toolbar.css">
 
 		<div id="toolbar" layout horizontal center>
 			<content select=".logo"></content>
@@ -19,7 +19,7 @@
 			<content></content>
 		</div>
 
-		<iron-media-query>
+		<iron-media-query
 				query="{{query}}"
 				queryMatches="{{smallScreen}}">
 		</iron-media-query>
