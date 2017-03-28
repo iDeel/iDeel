@@ -23,12 +23,14 @@
 	<link rel="import" href="../bower_components/paper-button/paper-button.html">
 	<link rel="import" href="../bower_components/paper-input/paper-input.html">
 	<link rel="import" href="../bower_components/iron-form/iron-form.html">
-	<link rel="import" href="../bower_components/iron-media-query/iron-media-query.html">
-	<link rel="import" href="webComponents/collapse-toolbar.html">
+
+	<!-- Bootstrap
+	 ================================================== -->
+	<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
 
 	<!-- Theme file
 	================================================== -->
-	<link rel="import" href="stylesheets/global-theme.html">
+	<link rel="stylesheet" href="stylesheets/global.css">
 
 	<style is="custom-style" include='iron-flex iron-positioning'>
 
@@ -95,11 +97,31 @@
 </head>
 
 <body class="fullbleed" style="background-color:powderblue;">
-	<paper-toolbar >
-		<div>iDeel</div>
-		<span class="flex"></span>
-		<paper-icon-button icon="menu"></paper-icon-button>
-	</paper-toolbar>
+
+	<nav id="main-navbar" class="navbar navbar-default" >
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">iDeel</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">Page 1</a></li>
+					<li><a href="#">Page 2</a></li>
+					<li><a href="#">Page 3</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 
 	<div class="container flex-center-layout-horizontal coming-soon">
 		<div>iDeel is coming soon</div>
@@ -154,6 +176,13 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-resource.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-sanitize.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-touch.js"></script>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="../node_modules/bootstrap/js/transition.js"></script>
+
 	<script src="../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
 	<script src="modules/routes.js"></script>
 
