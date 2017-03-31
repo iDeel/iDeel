@@ -1,18 +1,30 @@
-#registration-button-holder{
-	@apply(--layout-horizontal);
-	@apply(--layout-center-justified);
-	@apply(--layout-center)
+#title{
+	font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+	color: #297187;
+	font-size: 50px;
+	font-weight: 700;
+	text-align: center;
+	height: 25%;
 }
 
-
-.flex-center-layout-vertical {
-	@apply(--layout-vertical);
-	@apply(--layout-center-justified);
-	@apply(--layout-center);
+#title-registration-button-holder {
+	height: 85%;
 }
 
-.flex-center-layout-horizontal {
-	@apply(--layout-horizontal);
-	@apply(--layout-center-justified);
-	@apply(--layout-center);
+#follow-us{
+	height: auto;
 }
+
+.modal-content{
+	margin-top: 50%;
+}
+
+.space-4px {
+	padding: 4px 4px 4px 4px;
+}
+
+#submit-button{
+	background-color: royalblue;
+	color: white;
+}
+

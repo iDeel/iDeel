@@ -18,6 +18,7 @@
 	<link rel="import" href="../bower_components/paper-toolbar/paper-toolbar.html">
 	<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
 	<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+	<link rel="import" href="../bower_components/iron-icons/places-icons.html.html">
 	<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
 	<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
 	<link rel="import" href="../bower_components/paper-button/paper-button.html">
@@ -34,16 +35,6 @@
 	<link rel="stylesheet" href="stylesheets/index.css">
 
 	<style is="custom-style" include='iron-flex iron-flex-alignment iron-positioning'>
-
-
-		.coming-soon{
-			font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
-			color: #297187;
-			font-size: 50px;
-			font-weight: 700;
-			text-align: center;
-			height: 25%;
-		}
 		.registration-button {
 			height: 15%;
 		}
@@ -63,9 +54,6 @@
 			height: 100%;
 		}
 
-		.space-4px {
-			padding: 4px 4px 4px 4px;
-		}
 		.name-field {
 			height: 75px;
 		}
@@ -97,12 +85,6 @@
 				<a class="navbar-brand" href="#">iDeel</a>
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Home</a></li>
-					<li><a href="#">Page 1</a></li>
-					<li><a href="#">Page 2</a></li>
-					<li><a href="#">Page 3</a></li>
-				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
 					<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
@@ -111,15 +93,17 @@
 		</div>
 	</nav>
 
-	<div class="container flex-center-layout-horizontal coming-soon">
-		<div>iDeel is coming soon</div>
-	</div>
+	<div class="layout vertical center-justified" id="title-registration-button-holder">
+		<div class="container" id="title">
+			<div>iDeel is coming soon</div>
+		</div>
 
-	<!-- Button trigger modal -->
-	<div id="registration-button-holder" class="layout horizontal center-justified">
-		<paper-button raised  data-toggle="modal" data-target="#registration-modal">
-			Register
-		</paper-button>
+		<!-- Button trigger modal -->
+		<div id="registration-button-holder" class="layout horizontal center-justified">
+			<paper-button raised  data-toggle="modal" data-target="#registration-modal">
+				Register
+			</paper-button>
+		</div>
 	</div>
 
 	<!-- Modal -->
@@ -131,10 +115,10 @@
 					<h4 class="modal-title" id="registration-modal-lable">Modal title</h4>
 				</div>
 				<div class="modal-body">
-					<form is="iron-form" id="form" method="post" action="https://ideel.serverwebsite.com" class="registration-form-holder flex-center-layout-vertical">
-						<div class="registration-form">
+					<form is="iron-form" id="form" method="post" action="https://ideel.serverwebsite.com" class="layout horizontal center-justified">
+						<div class="">
 							<div>
-								<div class="flex-center-layout-horizontal">
+								<div class="layout horizontal center-justified">
 									<paper-input style="width: 100%" class="vertical" label="First Name"></paper-input>
 									<span class="space-4px"></span>
 									<paper-input style="width: 100%" class="vertical" label="Last Name"></paper-input>
@@ -144,47 +128,26 @@
 									<iron-icon icon="mail" prefix></iron-icon>
 								</paper-input>
 
-								<div class="flex-center-layout-horizontal registration-submit-button">
-									<paper-button raised class="indigo">Submit</paper-button>
-								</div>
+								<paper-input class="flex" label="Business Name (Optional)">
+									<iron-icon icon="places:business-center" prefix=""></iron-icon>
+								</paper-input>
 							</div>
 						</div>
 
 					</form>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary">Save changes</button>
+					<paper-button raised class="indigo" data-dismiss="modal">Close</paper-button>
+					<paper-button raised id="submit-button">Submit</paper-button>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<form is="iron-form" id="form" method="post" action="https://ideel.serverwebsite.com" class="registration-form-holder flex-center-layout-vertical">
-		<div class="registration-form">
-			<div>
-				<div class="flex-center-layout-horizontal">
-					<paper-input style="width: 100%" class="vertical" label="First Name"></paper-input>
-					<span class="space-4px"></span>
-					<paper-input style="width: 100%" class="vertical" label="Last Name"></paper-input>
-				</div>
-
-				<paper-input class="flex email-field" label="username@email.com">
-					<iron-icon icon="mail" prefix></iron-icon>
-				</paper-input>
-
-				<div class="flex-center-layout-horizontal registration-submit-button">
-					<paper-button raised class="indigo">Submit</paper-button>
-				</div>
-			</div>
-		</div>
-
-	</form>
-
-	<div class="flex-center-layout-horizontal follow-us">
-		<iron-icon icon="android"></iron-icon>
-		<iron-icon icon="android"></iron-icon>
-		<iron-icon icon="android"></iron-icon>
+	<div class="layout horizontal center-justified" id="follow-us">
+		<iron-icon src="images/social-media/facebook.svg"></iron-icon>
+		<span class="space-4px"></span>
+		<iron-icon src="images/social-media/twitter.svg"></iron-icon>
 	</div>
 
 
