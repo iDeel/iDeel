@@ -1,3 +1,18 @@
 #registration-button-holder{
-	margin: auto;
+	@apply(--layout-horizontal);
+	@apply(--layout-center-justified);
+	@apply(--layout-center)
+}
+
+
+.flex-center-layout-vertical {
+	@apply(--layout-vertical);
+	@apply(--layout-center-justified);
+	@apply(--layout-center);
+}
+
+.flex-center-layout-horizontal {
+	@apply(--layout-horizontal);
+	@apply(--layout-center-justified);
+	@apply(--layout-center);
 }
