@@ -11,6 +11,8 @@ var url = require('url');
 var util = require('util');
 var methodOverride = require('method-override');
 
+var bodyParser = require('body-parser');
+var jsonParser = bodyParser.json();
 
 //-------------------
 // Single-sign On
@@ -55,6 +57,23 @@ app.use(function (err, req, res, next) {
 	res.status(err.status || 500);
 	res.render('error');
 });
+
+
+
+
+//------------------//
+//---- Rest API ----//
+//------------------//
+
+//-------------------
+// Get
+
+
+//-------------------
+// Post
+app.post('/register', jsonParser, function (req, res) {
+	console.log("Called:")
+})
 
 console.log("Now Waiting");
 

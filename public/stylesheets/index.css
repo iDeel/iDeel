@@ -13,10 +13,11 @@
 
 #follow-us{
 	height: auto;
+	min-height: auto;
 }
 
 .modal-content{
-	margin-top: 50%;
+	margin-top: 15%;
 }
 
 .space-4px {
