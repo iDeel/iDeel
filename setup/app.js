@@ -32,8 +32,9 @@ app.use(logger('dev'));
 //-------------------
 // Initialize app
 app.use(favicon(path.join(__dirname, '../public', 'favicon.ico')));
-app.use(express.static(path.join(__dirname, '../public')));
+app.use('/', express.static(path.join(__dirname, '../public')));
 app.use(express.static(path.join(__dirname, '../')));
 app.use(express.Router());
+app.set('view engine', 'jade');
 
 module.exports = app;

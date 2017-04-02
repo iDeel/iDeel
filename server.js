@@ -71,8 +71,8 @@ app.use(function (err, req, res, next) {
 
 //-------------------
 // Post
-app.post('/register', jsonParser, function (req, res) {
-	console.log("Called:")
+app.post('/user', jsonParser, function (req, res) {
+	console.log("Called:");
 })
 
 console.log("Now Waiting");

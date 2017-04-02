@@ -22,6 +22,7 @@
     "paper-input": "PolymerElements/paper-input#^1.1.23",
     "paper-toolbar": "PolymerElements/paper-toolbar#^1.1.7",
     "iron-media-query": "PolymerElements/iron-media-query#^1.0.8",
-    "paper-menu-button": "PolymerElements/paper-menu-button#^1.5.2"
+    "paper-menu-button": "PolymerElements/paper-menu-button#^1.5.2",
+    "paper-spinner": "PolymerElements/paper-spinner#^1.2.1"
   }
 }

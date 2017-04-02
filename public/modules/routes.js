@@ -18,9 +18,9 @@ angular
 				templateUrl: 'modules/index/views/register.html',
 				controller: 'indexCtrl'
 			})
-			.when('/register', {
-				templateUrl: 'modules/makePlan/views/makePlan.html',
-				controller: 'makePlanCtrl'
+			.when('/user', {
+				templateUrl: 'modules/index/views/register.html',
+				controller: 'indexCtrl'
 			})
 			.otherwise({
 				redirectTo: '/'

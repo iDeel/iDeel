@@ -1,32 +1,40 @@
 <div ng-controller="indexCtrl">
-	<div ng-switch="view">
-		<div class="modal-body">
-			<form id="form" method="post" action="" class="layout horizontal center-justified">
-				<div class="">
-					<div>
-						<div class="layout horizontal center-justified">
-							<paper-input style="width: 100%" class="vertical" label="First Name"></paper-input>
-							<span class="space-4px"></span>
-							<paper-input style="width: 100%" class="vertical" label="Last Name"></paper-input>
+	<div ng-switch="view" ng-submit="SubmitUser()">
+		<div>
+			<div class="modal-body">
+				<form id="form" method="post" action="" class="layout horizontal center-justified">
+					<div class="layout vertical center-justified">
+						<div>
+							<div class="layout horizontal center-justified">
+								<paper-input style="width: 100%" class="vertical" label="First Name"></paper-input>
+								<span class="space-4px"></span>
+								<paper-input style="width: 100%" class="vertical" label="Last Name"></paper-input>
+							</div>
+
+							<paper-input class="flex email-field" label="username@email.com">
+								<iron-icon icon="mail" prefix></iron-icon>
+							</paper-input>
+
+							<paper-input class="flex" label="Business Name (Optional)">
+								<iron-icon icon="places:business-center" prefix=""></iron-icon>
+							</paper-input>
 						</div>
-
-						<paper-input class="flex email-field" label="username@email.com">
-							<iron-icon icon="mail" prefix></iron-icon>
-						</paper-input>
-
-						<paper-input class="flex" label="Business Name (Optional)">
-							<iron-icon icon="places:business-center" prefix=""></iron-icon>
-						</paper-input>
+						<div class="modal-footer">
+							<paper-button raised class="indigo" data-dismiss="modal">Close</paper-button>
+							<paper-button raised id="submit-button" ng-click="changeView('submiting')" type="submit">
+								Submit
+							</paper-button>
+							<input type="submit" value="Submit">
+						</div>
 					</div>
-				</div>
+				</form>
+			</div>
 
-			</form>
 		</div>
-		<div class="modal-footer">
-			<paper-button raised class="indigo" data-dismiss="modal">Close</paper-button>
-			<paper-button raised id="submit-button" ng-click="changeView('submitting')">Submit</paper-button>
+
+		<div>
+			<paper-spinner active></paper-spinner>
 		</div>
 	</div>
-
 
 </div>
