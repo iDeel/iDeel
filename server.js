@@ -58,12 +58,8 @@ app.use(function (err, req, res, next) {
 
 console.log("Now Waiting");
 
-var port;
-if (process.env.port)
-	port = process.env.port;
-else
-	port = 80;
 
-app.listen(app.get(port),() =>{
-	console.log('iDeel Server is listening on port ' + port);
+port = 80;
+app.listen(app.get(80),() =>{
+	console.log('iDeel Server is listening on port ' + 80);
 });
