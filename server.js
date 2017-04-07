@@ -64,4 +64,6 @@ if (process.env.port)
 else
 	port = 80;
 
-app.listen(port);
+app.listen(app.get(port),() =>{
+	console.log('iDeel Server is listening on port ' + port);
+});
