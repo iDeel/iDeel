@@ -14,16 +14,12 @@ angular
 		$scope.user.email="";
 		$scope.user.businessName="";
 
-		// $scope.SubmitUser = function () {
-		// 	console.log("SubmitUser is called: ");
-		// 	var url = '/user';
-		// 	$http.post(url, $scope.user).success(function(data, status, headers, config){
-		// 		console.log("Called the server");
-		// 	});
-		// }
-
 		$scope.SubmitUser = function () {
-			console.log('Test');
+			console.log("SubmitUser is called: ");
+			var url = '/#/user';
+			$http.post(url, $scope.user).success(function(data, status, headers, config){
+				console.log("Called the server");
+			});
 		}
 
 		$scope.changeView = function (view) {
